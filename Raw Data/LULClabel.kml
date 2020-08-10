@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+  <ExtendedData>
+    <Data name='label'>
+      <value>urban1</value>
+    </Data>
+    <Data name='system:index'>
+      <value>0</value>
+    </Data>
+  </ExtendedData>
+  <Polygon>
+    <outerBoundaryIs>
+      <LinearRing>
+        <coordinates>72.89673252200855,19.03593773792085 72.8967781195618,19.03593773792085 72.8967781195618,19.035974503104985 72.89673252200855,19.035974503104985 72.89673252200855,19.03593773792085 </coordinates>
+      </LinearRing>
+    </outerBoundaryIs>
+  </Polygon>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='system:index'>
+      <value>1</value>
+    </Data>
+    <Data name='label'>
+      <value>urban2</value>
+    </Data>
+  </ExtendedData>
+  <Polygon>
+    <outerBoundaryIs>
+      <LinearRing>
+        <coordinates>72.84536988072949,19.02836368890097 72.84547448688107,19.02836368890097 72.84547448688107,19.02847398945867 72.84536988072949,19.02847398945867 72.84536988072949,19.02836368890097 </coordinates>
+      </LinearRing>
+    </outerBoundaryIs>
+  </Polygon>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='system:index'>
+      <value>2</value>
+    </Data>
+    <Data name='label'>
+      <value>forest1</value>
+    </Data>
+  </ExtendedData>
+  <Polygon>
+    <outerBoundaryIs>
+      <LinearRing>
+        <coordinates>72.91536402196947,19.237539435772568 72.91551959009233,19.237539435772568 72.91551959009233,19.237706576485753 72.91536402196947,19.237706576485753 72.91536402196947,19.237539435772568 </coordinates>
+      </LinearRing>
+    </outerBoundaryIs>
+  </Polygon>
+</Placemark><Placemark>
+  <ExtendedData>
+    <Data name='system:index'>
+      <value>3</value>
+    </Data>
+    <Data name='label'>
+      <value>forest2</value>
+    </Data>
+  </ExtendedData>
+  <Polygon>
+    <outerBoundaryIs>
+      <LinearRing>
+        <coordinates>72.92424749875309,19.262579944782626 72.92438026809933,19.262579944782626 72.92438026809933,19.262709079274774 72.92424749875309,19.262709079274774 72.92424749875309,19.262579944782626 </coordinates>
+      </LinearRing>
+    </outerBoundaryIs>
+  </Polygon>
+</Placemark>
+</Document>
+</kml>
