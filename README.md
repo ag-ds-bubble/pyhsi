@@ -18,7 +18,6 @@ Utilities for Hyperspectral Imagery
 
 ****
 
-======================================================================
 ## Spectral Analysis
 ****
 <img style="float: right;" src="static/spec_analysis.png" align="center">
@@ -27,4 +26,4 @@ Utilities for Hyperspectral Imagery
 ## Clustering Analysis
 ****
 
-<img style="float: right;" src="static/clusteranalysis.gif" align="left">
+<img style="float: right;" src="static/clusteranalysis.gif" align="center">
