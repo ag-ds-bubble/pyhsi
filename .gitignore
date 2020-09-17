@@ -1,1 +1,12 @@
 pyhsi_venv/*
+prep_data/*
+
+# Cache
+__pycache__/
+*__pycache__/
+**__pycache__/
+
+*.pyc
+**.pyc
+
+raw_data/EO1H1480472016328110PZ.zip

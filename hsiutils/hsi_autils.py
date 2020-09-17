@@ -1,19 +1,21 @@
-
-
+import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import ImageGrid
+import matplotlib.gridspec as gridspec
+from matplotlib.patches import Rectangle
 
 
 class HSClusterAnalysis:
     
-    def __init__(self, spectral_data, spectral_img, class_masks:dict,):
+    def __init__(self, spectral_data, class_masks:dict,):
         
         # Initialise Data
         self.spectral_data = spectral_data.copy()
-        if spectral_img is None:
-            self.spectral_img = spectral_data.mean(axis=2).T
-        else:
-            self.spectral_img = spectral_img.T.copy()
+        self.spectral_img = spectral_data.mean(axis=2).T
         self.img_h, self.img_w = self.spectral_img.shape
         self.class_masks = class_masks
+
+        if len(self.class_masks) > 8:
+            raise ValueError("<8 masks should be provided.")
         
         # Initialise Figure parameters
         plt.rcParams['figure.figsize'] = (13.5,12)
@@ -55,6 +57,9 @@ class HSClusterAnalysis:
         # Connect the event handlers to the plot
         self.clsfig.canvas.mpl_connect('button_press_event', self.click_axes)
         self.clsfig.canvas.mpl_connect('motion_notify_event', self.hover_axes)
+
+        plt.show()
+        plt.ion()
     
     def click_axes(self, event):
         x_pixel, y_pixel = int(event.xdata), int(event.ydata)
@@ -128,16 +133,13 @@ class HSClusterAnalysis:
 
 
 class SpectralAnalysis:
-    def __init__(self, spectral_data, spectral_img = None):
+    def __init__(self, spectral_data):
         self.specfig, self.specaxes = plt.subplots(nrows=3,ncols=1,
                                                     gridspec_kw={'height_ratios': [1, 2, 2]},
                                                     figsize=(13,11))
         plt.tight_layout()
         self.spectral_data = spectral_data.copy()
-        if spectral_img is None:
-            self.spectral_img = spectral_data.mean(axis=2).T
-        else:
-            self.spectral_img = spectral_img.copy()
+        self.spectral_img = spectral_data.mean(axis=2).T
         self.img_h, self.img_w = self.spectral_img.shape
         
         self.prev_line_x, self.prev_line_y, self.specplt = None, None, None
@@ -159,6 +161,9 @@ class SpectralAnalysis:
         self.specaxes[2].set_ylim(0,self.spectral_data.max())
         self.specaxes[1].grid()
         self.specaxes[2].grid()
+
+        plt.show()
+        plt.ion()
 
     def enter_axes(self, event):
         if event.inaxes == self.specaxes[0]:
